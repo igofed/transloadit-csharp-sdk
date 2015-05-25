@@ -4,6 +4,10 @@ This is the PCL port of official .NET SDK for the transloadit.com API.
 
 You can use it to setup file upload forms for your users, or to upload existing files from your server.
 
+#Nuget#
+
+Available in NuGet https://www.nuget.org/packages/TransloaditPCL/
+
 #Directory structure#
 
 - ***"build"*** - added to .gitignore (directory will be created automatically when the class libraries are built on your workspace)
