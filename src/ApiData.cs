@@ -17,7 +17,7 @@ namespace Transloadit
         /// <summary>
         /// Gets and sets the path list of the files which will be sent
         /// </summary>
-        public Dictionary<string, string> Files { get; set; }
+		public Dictionary<string, byte[]> Files { get; set; }
 
         #endregion
 
@@ -29,7 +29,7 @@ namespace Transloadit
         public ApiData()
         {
             Fields = new Dictionary<string, object>();
-            Files = new Dictionary<string, string>();
+			Files = new Dictionary<string, byte[]>();
         }
 
         #endregion

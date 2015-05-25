@@ -9,20 +9,14 @@ namespace Transloadit.Assembly
     public interface IAssemblyBuilder
     {
         /// <summary>
-        /// Adds file to the current assembly
-        /// </summary>
-        /// <param name="path">Path of the file</param>
-        void AddFile(string path);
-
-        /// <summary>
         /// Adds file to the current assembly with specific key
         /// </summary>
         /// <param name="key">Key of the file to be uploaded</param>
-        /// <param name="path">Path of the file</param>
+        /// <param name="file">File byte array</param>
         /// <exception cref="Transloadit.Assembly.Exceptions.InvalidFieldKeyException">
         /// Thrown when an invalid (reserved) field key is tried to be used
         /// </exception>
-        void AddFile(string key, string path);
+		void AddFile(string key, byte[] file);
 
         /// <summary>
         /// Adds step to the current assembly

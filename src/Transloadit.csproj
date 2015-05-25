@@ -6,14 +6,14 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3362EBC1-46C7-45DF-A519-90F269B319D8}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Transloadit</RootNamespace>
     <AssemblyName>Transloadit</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile136</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,10 +36,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.7\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.7\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.7\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="bouncy_castle_hmac_sha_pcl">
+      <HintPath>..\packages\BouncyCastle-PCL.1.0.0.6\lib\bouncy_castle_hmac_sha_pcl.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiData.cs" />
@@ -67,11 +79,8 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rd "$(ProjectDir)obj" /S /Q
-copy /Y "$(SolutionDir)build\lib\bin\Release\Transloadit.dll" "$(SolutionDir)bin\Transloadit.dll"
-copy /Y "$(SolutionDir)build\lib\bin\Release\Newtonsoft.Json.dll" "$(SolutionDir)bin\Newtonsoft.Json.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -80,4 +89,7 @@ copy /Y "$(SolutionDir)build\lib\bin\Release\Newtonsoft.Json.dll" "$(SolutionDir
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>

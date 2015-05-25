@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Transloadit.Log
 {
@@ -28,11 +29,11 @@ namespace Transloadit.Log
         {
             if (TransloaditLogger.Enabled)
             {
-                Console.Write("Info: ");
-                Console.Write(type.Name);
-                Console.Write(" | ");
-                Console.WriteLine(String.Format(message, parameters));
-                Console.WriteLine("-------------");
+				Debug.WriteLine("Info: ");
+				Debug.WriteLine(type.Name);
+				Debug.WriteLine(" | ");
+				Debug.WriteLine(String.Format(message, parameters));
+				Debug.WriteLine("-------------");
             }
         }
 
@@ -47,13 +48,13 @@ namespace Transloadit.Log
         {
             if (TransloaditLogger.Enabled)
             {
-                Console.Write("Error: ");
-                Console.WriteLine(type.Name);
-                Console.Write(" | ");
-                Console.WriteLine(String.Format(message, parameters));
-                Console.Write("Exception message: ");
-                Console.WriteLine(exception.Message);
-                Console.WriteLine("-------------");
+				Debug.WriteLine("Error: ");
+				Debug.WriteLine(type.Name);
+				Debug.WriteLine(" | ");
+				Debug.WriteLine(String.Format(message, parameters));
+				Debug.WriteLine("Exception message: ");
+				Debug.WriteLine(exception.Message);
+				Debug.WriteLine("-------------");
             }
         }
 
@@ -67,11 +68,11 @@ namespace Transloadit.Log
         {
             if (TransloaditLogger.Enabled)
             {
-                Console.Write("Error: ");
-                Console.WriteLine(type.Name);
-                Console.Write(" | ");
-                Console.WriteLine(String.Format(message, parameters));
-                Console.WriteLine("-------------");
+				Debug.WriteLine("Error: ");
+				Debug.WriteLine(type.Name);
+				Debug.WriteLine(" | ");
+				Debug.WriteLine(String.Format(message, parameters));
+				Debug.WriteLine("-------------");
             }
         }
 
@@ -84,12 +85,12 @@ namespace Transloadit.Log
         {
             if (TransloaditLogger.Enabled)
             {
-                Console.Write("Error: ");
-                Console.WriteLine(type.Name);
-                Console.Write(" | ");
-                Console.Write("Exception message: ");
-                Console.WriteLine(exception.Message);
-                Console.WriteLine("-------------");
+				Debug.WriteLine("Error: ");
+				Debug.WriteLine(type.Name);
+				Debug.WriteLine(" | ");
+				Debug.WriteLine("Exception message: ");
+				Debug.WriteLine(exception.Message);
+				Debug.WriteLine("-------------");
             }
         }
 

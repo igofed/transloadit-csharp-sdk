@@ -34,13 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthenticationTests.cs" />
@@ -50,12 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OptionalSettingsTests.cs" />
     <Compile Include="UseTemplateTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\src\Transloadit.csproj">
-      <Project>{3362EBC1-46C7-45DF-A519-90F269B319D8}</Project>
-      <Name>Transloadit</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -69,4 +62,10 @@ rd "$(ProjectDir)obj" /S /Q</PostBuildEvent>
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\src\Transloadit.csproj">
+      <Project>{3362EBC1-46C7-45DF-A519-90F269B319D8}</Project>
+      <Name>Transloadit</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
