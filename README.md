@@ -1,18 +1,8 @@
-#Important#
-
-Transloadit .NET SDK works with .NET 3.5 or with later version.
-
-#Used third parties#
-
-This SDK uses **Json.NET 6.0** (released on Sat Feb 1, 2014 at 9:00 AM). You can find more information on http://json.codeplex.com/. Documentation can be found on http://james.newtonking.com/json/help/index.html website. Working assembly can be found in the *"bin"* directory.
-
 #Purpose#
 
-This is the official .NET SDK for the transloadit.com API.
+This is the PCL port of official .NET SDK for the transloadit.com API.
 
 You can use it to setup file upload forms for your users, or to upload existing files from your server.
-
-Transloadit SDK for .NET allows you to use Transloadit services easily with .NET applications (Web applications, desktop applications, windows phone applications)
 
 #Directory structure#
 
