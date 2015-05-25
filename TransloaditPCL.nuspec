@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>TransloaditPCL</id>
+        <version>1.0.2</version>
+        <title>Transloadit PCL</title>
+        <authors>Igor Fedchun (mail@itornotit.com)</authors>
+        <licenseUrl>https://github.com/igofed/transloadit-csharp-sdk/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/igofed/transloadit-csharp-sdk</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>PCL port of official Transloadit C#.NET SDK</description>
+	<summary>PCL port of official Transloadit C#.NET SDK</summary>
+	<tags> TransloaditPCL, Transloadit PCL, PCL, Xamarin.Forms, Xamarin.iOS, Xamarin.Android</tags>
+	<dependencies>
+		<dependency id="Newtonsoft.Json" version="6.0.8"/>
+		<dependency id="BouncyCastle-PCL" version="1.0.0.6" />
+	</dependencies>
+    </metadata>
+    <files>
+        <file src="build/lib/bin/Release/Transloadit.dll" target="lib\portable-net4+sl5+wp8+win8" />
+    </files>
+</package>
