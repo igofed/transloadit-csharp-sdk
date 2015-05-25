@@ -6,9 +6,7 @@ You can use it to setup file upload forms for your users, or to upload existing 
 
 #Directory structure#
 
-- ***"bin"*** - precompiled SDK with the necessary third parties
 - ***"build"*** - added to .gitignore (directory will be created automatically when the class libraries are built on your workspace)
-- ***"lib"*** - third party libs/DLLs
 - ***"src"*** - whole source of the SDK
 - ***"test"*** - source of unit tests
 
