@@ -245,6 +245,12 @@ After the request is done and `response` object was created, you are able to use
 - `response.Success` - gets the success of the request
 
 > **Note:** You can refer to parsed JSON values by string keys in `response.Data`
+> **Further Notes:** If you need the full JSON for a completed assembly then you will need to long poll the Assembly at URLs of the following format, `https://api2.transloadit.com/assemblies/{assembly_id}`. You can read more on Transloadit's suggested polling methodology [here](https://transloadit.com/docs/api/#assemblies-assembly-id-get). Below is an example construction of the polling url given a TransloaditResponse object instance.
+
+```c#
+var response = transloadIt.InvokeAssembly(assembly);
+string polling_url = $"https://api2.transloadit.com/assemblies/{response.Data["assembly_id"].ToString()}";
+```
 
 ####2.2.7. Delete assembly on Transloadit####
 
